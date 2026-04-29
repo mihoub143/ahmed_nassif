@@ -112,15 +112,10 @@ $mes_chantiers = $stmt_cloture->fetchAll(PDO::FETCH_ASSOC);
     <section id="offres" class="section-box">
         <h2> Offres de récolte disponibles</h2>
         
-        <!-- DEBUG INFO -->
-        <div style="background: rgba(255,215,0,0.1); border: 1px solid rgba(255,215,0,0.3); border-radius: 8px; padding: 10px 15px; margin-bottom: 15px; font-size: 13px; color: var(--text-muted);">
-             <b>Debug:</b> Total offres en BDD: <b style="color: var(--accent-gold);"><?= $total_offres ?></b> | 
-            Mes postulations: <b style="color: var(--accent-gold);"><?= $mes_postulations ?></b> | 
-            Offres visibles: <b style="color: var(--accent-gold);"><?= count($offres_disponibles) ?></b>
-        </div>
+<!-- Debug info supprimé -->
         
         <!-- FILTRES -->
-        <form method="GET" action="#offres" style="margin-bottom: 25px;">
+        <form method="GET" action="dashboard_ouvrier.php#offres" style="margin-bottom: 25px;">
             <div style="display: flex; gap: 15px; flex-wrap: wrap; align-items: flex-end;">
                 <div style="display: flex; flex-direction: column; gap: 6px; flex: 1; min-width: 180px;">
                     <label style="color: var(--accent-gold); font-size: 12px; font-weight: 600;">Type de fruit</label>
@@ -150,7 +145,7 @@ $mes_chantiers = $stmt_cloture->fetchAll(PDO::FETCH_ASSOC);
                 </div>
                 <div>
                     <button type="submit" class="btn" style="padding: 10px 20px;">Filtrer</button>
-                    <a href="dashboard_ouvrier.php#offres" class="btn delete" style="padding: 10px 20px; text-decoration: none; margin-left: 5px;">Réinitialiser</a>
+                    <a href="dashboard_ouvrier.php#offres" class="btn" style="padding: 10px 20px; text-decoration: none; margin-left: 5px; background: linear-gradient(135deg, #ff6b6b, #ee5a52); color: white;">Réinitialiser</a>
                 </div>
             </div>
         </form>
